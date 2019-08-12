@@ -11,14 +11,6 @@ function Square(props) {
 }
   
 class Board extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            squares: Array(9).fill(null),
-            xIsNest: true,
-        };
-    }
-
     handleClick(i) {
         const squares = this.state.squares.slice();
         if(calculateWinner(squares) || squares[i]) {
